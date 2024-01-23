@@ -15,6 +15,7 @@ export default function Home() {
         <div>By Me</div>
       </div>
       <div className={styles.center}>center</div>
+      {/* a change */}
       <div className={styles.grid}>
         <Link href="/profile" className={styles.card}>
           <h2>
