@@ -1,0 +1,24 @@
+.nav {
+  position: fixed;
+  z-index: 3;
+  top: 2rem;
+  left: 1rem;
+  margin-inline: 10%;
+}
+.grid {
+  position: fixed;
+  top: 2rem;
+  left: 4rem;
+  margin-inline: 10%;
+
+  /* background-color: aqua; */
+}
+
+@media screen and (width < 300px) {
+  .nav {
+    display: none;
+  }
+  .grid {
+    left: 1rem;
+  }
+}
