@@ -4,21 +4,44 @@
   top: 2rem;
   left: 1rem;
   margin-inline: 10%;
+  z-index: 2;
 }
 .grid {
   position: fixed;
   top: 2rem;
   left: 4rem;
   margin-inline: 10%;
-
-  /* background-color: aqua; */
+  transform: translateY(-150%);
+  transition: 200ms ease-in-out;
+  overflow: hidden;
+  z-index: 3;
 }
 
+.nav:hover {
+  width: 3.5rem;
+  height: 10rem;
+}
+.grid:hover,
+.nav:hover + .grid {
+  transform: translateY(0);
+  height: 230px;
+}
+.card {
+  line-height: 2rem;
+}
+
+@media screen and (width < 700px) {
+  .grid {
+    font-size: 0.825em;
+  }
+}
 @media screen and (width < 300px) {
-  .nav {
-    display: none;
+  .nav:hover > svg {
+    visibility: hidden;
   }
   .grid {
     left: 1rem;
+    top: 0rem;
+    left: -1rem;
   }
 }

@@ -1,0 +1,3 @@
+[submodule "app/lib/react-tictactoe-example"]
+	path = app/lib/react-tictactoe-example
+	url = https://github.com/AditWongsaroj/react-tictactoe-example

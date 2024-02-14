@@ -1,13 +1,18 @@
 .social_links {
-  display: inline-block;
-  column-gap: 2px;
+  position: fixed;
+  padding: 0.5rem;
+  overflow: hidden;
+  bottom: 1rem;
+  right: 2rem;
+  margin-inline: 10%;
 }
-/* .social_links > * {
-  flex: 1 0 40%;
-} */
+
+.social_links a {
+  margin-inline: 0.25rem;
+}
 
 .animated {
-  animation: rotate 2s;
+  animation: rotate 1.5s;
   animation-delay: 1250ms;
 }
 .social_links a + a .animated {
@@ -18,7 +23,7 @@
   display: inline-block;
 }
 .social_links a div svg {
-  --logo-size: 2.2rem;
+  --logo-size: 2.25rem;
   height: var(--logo-size);
   width: var(--logo-size);
   background: linear-gradient(in hsl longer hue 60deg, yellow 0 0);
@@ -27,16 +32,12 @@
   background: linear-gradient(in hsl longer hue 60deg, rgb(234, 33, 234) 0 0);
 }
 
-/* .svg:hover {
-  animation: rotate 1s;
-} */
-
 #gh {
   border-radius: 50%;
 }
 #gh path {
   stroke: white;
-  stroke-width: 0.15px;
+  stroke-width: 0.25px;
   stroke-opacity: 50%;
 }
 #gh:hover {
@@ -48,7 +49,7 @@
 }
 #ln path {
   stroke: black;
-  stroke-width: 0.15px;
+  stroke-width: 0.5px;
   stroke-opacity: 50%;
 }
 #ln:hover {
@@ -67,10 +68,5 @@
 @media screen and (width < 700px) {
   .social_links a div {
     margin-inline: 1rem;
-  }
-}
-@media screen and (width < 300px) {
-  .social_links {
-    width: 100vw;
   }
 }

@@ -3,7 +3,7 @@ import styles from "./sl.module.css";
 
 export default function Social_links(this: any) {
   const button = links.map((link) => (
-    <a key={link.n} href={link.href}>
+    <a key={link.n} href={link.href} aria-label={link.title}>
       <div className={styles.animated}>
         <svg id={link.id} viewBox={link.vBx}>
           <path d={link.d}></path>
@@ -18,6 +18,7 @@ export default function Social_links(this: any) {
 const links = [
   {
     n: 1,
+    title: "to my git hub",
     id: styles.gh,
     vBx: "0 0 16 16",
     href: "https://github.com/AditWongsaroj",
@@ -25,6 +26,7 @@ const links = [
   },
   {
     n: 2,
+    title: "to my linkedin",
     id: styles.ln,
     vBx: "1 1 22 22",
     href: "https://www.linkedin.com/in/adit-wongsaroj/",

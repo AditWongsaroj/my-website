@@ -9,6 +9,12 @@ function Links() {
   return (
     <>
       <div className={styles.grid}>
+        <Link href="/" className={styles.card}>
+          <h2>
+            <span>-&gt;</span> /home
+          </h2>
+        </Link>
+
         <Link href="/profile" className={styles.card}>
           <h2>
             <span>-&gt;</span> Profile
@@ -23,9 +29,9 @@ function Links() {
           <p>Stuff I&apos;ve done</p>
         </Link>
 
-        <Link href="/" className={styles.card}>
+        <Link href="/patrician" className={styles.card}>
           <h2>
-            <span>-&gt;</span> Patreon
+            <span>-&gt;</span> Patrician
           </h2>
           <p>Contant me</p>
         </Link>
@@ -34,27 +40,13 @@ function Links() {
   );
 }
 
-export function NavBar() {
-  const [active, setActive] = useState(true);
-  const onClick = () => setActive(!active);
-
-  if (
-    typeof window !== "undefined" &&
-    window?.innerWidth < 300 &&
-    active != true
-  ) {
-    setActive(true);
-  }
+export default function NavBar() {
   return (
     <>
-      <div
-        className={styles.nav}
-        onPointerEnter={() => setActive(true)}
-        onClick={onClick}
-      >
+      <div className={styles.nav}>
         <Menu />
       </div>
-      {active ? <Links /> : null}
+      <Links />
     </>
   );
 }
