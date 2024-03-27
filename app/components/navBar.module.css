@@ -1,6 +1,5 @@
 .nav {
   position: fixed;
-  z-index: 3;
   top: 2rem;
   left: 1rem;
   margin-inline: 10%;
@@ -14,17 +13,19 @@
   transform: translateY(-150%);
   transition: 200ms ease-in-out;
   overflow: hidden;
-  z-index: 3;
+  display: none;
+  z-index: 2;
 }
 
 .nav:hover {
   width: 3.5rem;
-  height: 10rem;
+  height: 13rem;
 }
 .grid:hover,
 .nav:hover + .grid {
   transform: translateY(0);
   height: 230px;
+  display: block;
 }
 .card {
   line-height: 2rem;
